@@ -1,0 +1,9 @@
+.listFiltered{
+    height: 20vh;
+    overflow: auto;
+    border: 1px solid black;
+}
+
+.listFiltered > div{
+    margin-bottom: 6px;
+}
