@@ -1,24 +1,51 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import "./ListFiltered.css"
 
+import {removeTextAction} from "../../state/actions";
 
 const mapStateToProps = state => {
     return {
-            textList: state.textList
+            textList: state.textList,
+            sortAscending: state.textList.sortAscending,
         }            
 }
 
+const mapDispachToProps = dispatch => {
+    return {
+        removeTextAction: (text, color) => dispatch(removeTextAction({text, color})),
+    }
+}
+
 function ListFiltered(props){
-    console.log(props)
-    const {textList, selectFilter} = props;
-    console.log(textList[selectFilter])
-    const finalList = textList[selectFilter] || [];
+    const {textList, selectFilter, sortAscending, removeTextAction} = props;
+    let finalList = textList[selectFilter] || [];
+
+    useEffect(() => {
+        finalList = finalList.sort(sortBy(sortAscending))
+        
+    }, [finalList.length, sortAscending]);
+
+    function sortBy(isAsending){
+        return (a, b) => {
+            a = a.toLocaleLowerCase();
+            b = b.toLocaleLowerCase();
+
+            if (a > b) { return isAsending ? -1: 1 }
+            if (b > a) { return isAsending ? 1 : -1 }
+            return 0;
+        }
+    }
+
+    function removeText(text, color){
+        removeTextAction(text, color)
+    }
 
     return  <div className="listFiltered">
                 {finalList.map((info, key) => {
                             return <div key={`${key}-${info}${selectFilter}`}style={{"background": selectFilter}}>
-                                        {info}
+                                        <span>{info}</span>
+                                        <button className="close" onClick={() => removeText(info, selectFilter)}>x</button>
                                     </div>
                         })
                 }
@@ -26,4 +53,4 @@ function ListFiltered(props){
 
 }
 
-export default connect(mapStateToProps)(ListFiltered);
+export default connect(mapStateToProps, mapDispachToProps)(ListFiltered);

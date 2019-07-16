@@ -1,29 +1,13 @@
 import React, { Fragment } from 'react';
-import {connect} from 'react-redux';
 import "./Board.css"
 
 import Colors from "../Colors";
 import TextHighlighter from "../TextHighlighter";
 import ListFiltered from "../ListFiltered";
+import Sort from "../Sort";
 
-import {selectHighLighterColorAction, selectFilterColorAction} from "../../state/actions";
 
-const mapStateToProps = state => {
-    return {
-            colors: state.colors.options,
-            selectFilter: state.colors.selectFilter,
-            selectHighLighter: state.colors.selectHighLighter,
-        }
-}
-
-const mapDispachToProps = dispatch => {
-    return {
-        selectHighLighterColorAction: info => dispatch(selectHighLighterColorAction(info)),
-        selectFilterColorAction: info => dispatch(selectFilterColorAction(info)),
-    }
-}
-
-function Board(props){
+export function Board(props){
     const {selectFilter, selectFilterColorAction, selectHighLighter, selectHighLighterColorAction, colors} = props;
 
     return  <Fragment>
@@ -31,7 +15,7 @@ function Board(props){
                     options={colors}
                     optionSelected={selectHighLighter}
                     onClick={selectHighLighterColorAction}
-                    />
+                />
                 
                 <div className="--clear-20"></div>
                 <TextHighlighter
@@ -39,18 +23,20 @@ function Board(props){
                 />
 
                 <div className="--clear-20"></div>
-                <Colors title="Filter"
-                    options={colors}
-                    optionSelected={selectFilter}
-                    onClick={selectFilterColorAction}
-                />
+                <div className="--flex --flexBetween">
+                    <Colors title="Filter"
+                        options={colors}
+                        optionSelected={selectFilter}
+                        onClick={selectFilterColorAction}
+                        />
+                    <Sort/>
+                </div>
 
                 <div className="--clear-20"></div>
                 <ListFiltered
                     selectFilter={selectFilter}
                 />
             </Fragment>
-
 }
 
-export default connect(mapStateToProps, mapDispachToProps)(Board) ;
+export default Board;

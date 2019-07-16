@@ -3,13 +3,13 @@ import {Provider} from "react-redux";
 import store from "./state/store";
 import './App.css';
 
-import Board from "./components/Board";
+import Container from "./components/Container";
 
-function App() {
+export function App() {
   return (
     <Provider store={store}>
         <div className="App container">
-            <Board/>
+            <Container/>
         </div>
     </Provider>
   );
