@@ -1,4 +1,4 @@
-import {ADD_TEXT_LIST, REMOVE_TEXT_LIST, SORT_TEXT_LIST} from "../actions/actions-types";
+import {ADD_TEXT_LIST, REMOVE_TEXT_LIST, SORT_TEXT_LIST} from "../actions/actions-types.js";
 
 export default function addLinkReducer(state = {sortAscending: false}, action){
     switch(action.type){

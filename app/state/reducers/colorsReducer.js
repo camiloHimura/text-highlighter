@@ -1,4 +1,4 @@
-import {SELECT_HIGHLIGHTER_COLOR, SELECT_FILTER_COLOR} from "../actions/actions-types";
+import {SELECT_HIGHLIGHTER_COLOR, SELECT_FILTER_COLOR} from "../actions/actions-types.js";
 
 const InitialState = {options: ["red", "yellow", "green"], selectHighLighter: "red", selectFilter: "red"};
 
