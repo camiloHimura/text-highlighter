@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import "./Colors.css"
 
 function Colors(props){
@@ -19,6 +20,13 @@ function Colors(props){
                 <h2>{title}</h2>
             </div>
 
+}
+
+Colors.propTypes = {
+    options: PropTypes.arrayOf(PropTypes.string).isRequired,
+    optionSelected: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
 }
 
 export default Colors ;

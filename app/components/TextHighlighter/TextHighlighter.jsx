@@ -1,5 +1,6 @@
 import React, {useState, useRef} from 'react';
 import {connect} from 'react-redux';
+import PropTypes from "prop-types";
 import "./TextHighlighter.css"
 
 import {addTextAction} from "../../state/actions";
@@ -32,6 +33,12 @@ function TextHighlighter(props){
                 <textarea autoFocus={true} ref={inputTextarea} onSelect={selectedText}>
                 </textarea>
             </div>
+}
+
+TextHighlighter.propTypes = {
+    optionSelected: PropTypes.string,
+    selectHighLighter: PropTypes.string,
+    addText: PropTypes.func,
 }
 
 export default connect(mapStateToProps, mapDispachToProps)(TextHighlighter) ;

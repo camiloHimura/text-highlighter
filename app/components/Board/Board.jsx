@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from "prop-types";
 import "./Board.css"
 
 import Colors from "../Colors";
@@ -37,6 +38,14 @@ export function Board(props){
                     selectFilter={selectFilter}
                 />
             </Fragment>
+}
+
+Board.propTypes = {
+    colors: PropTypes.arrayOf(PropTypes.string).isRequired,
+    selectFilter: PropTypes.string.isRequired,
+    selectHighLighter: PropTypes.string.isRequired,
+    selectHighLighterColorAction: PropTypes.func.isRequired,
+    selectFilterColorAction: PropTypes.func.isRequired,
 }
 
 export default Board;

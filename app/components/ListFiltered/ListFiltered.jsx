@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
+import PropTypes from "prop-types";
 import "./ListFiltered.css"
 
 import {removeTextAction} from "../../state/actions";
@@ -17,7 +18,7 @@ const mapDispachToProps = dispatch => {
     }
 }
 
-function ListFiltered(props){
+function ListFiltered(props) {
     const {textList, selectFilter, sortAscending, removeTextAction} = props;
     let finalList = textList[selectFilter] || [];
 
@@ -51,6 +52,15 @@ function ListFiltered(props){
                 }
             </div>
 
+}
+
+ListFiltered.propTypes = {
+    textList: PropTypes.shape({
+        sortAscending: PropTypes.bool.isRequired
+    }),
+    selectFilter: PropTypes.string.isRequired, 
+    sortAscending: PropTypes.bool.isRequired, 
+    removeTextAction: PropTypes.func.isRequired
 }
 
 export default connect(mapStateToProps, mapDispachToProps)(ListFiltered);
