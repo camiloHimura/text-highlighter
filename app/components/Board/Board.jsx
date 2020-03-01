@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import PropTypes from "prop-types";
-import "./Board.css"
 
 import Colors from "../Colors";
 import TextHighlighter from "../TextHighlighter";

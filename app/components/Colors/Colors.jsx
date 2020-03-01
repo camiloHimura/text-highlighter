@@ -1,24 +1,24 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import "./Colors.css"
+import {Container, Title} from "./styles.js"
 
 function Colors(props){
-    const {options, optionSelected, onClick, title = ''} = props;
+  const {options, optionSelected, onClick, title = ''} = props;
 
-    return  <div className="colorsContainer --flex --alignCenter">
-                {options.map((color, key) => {
-                    const selected = optionSelected === color ? 'selected': '';
+  return  <div className="--flex --alignCenter">
+              {options.map((color, key) => {
+                  const selected = optionSelected === color ? 'selected': '';
+                  
+                  return <Container key={`${key}-${color}`} 
+                            className={selected} 
+                            style={{"background": color}}
+                            onClick={() => onClick(color)}
+                          >
+                          </Container>
+              })}
 
-                    return <div key={`${key}-${color}`} 
-                                className={selected} 
-                                style={{"background": color}}
-                                onClick={() => onClick(color)}
-                            >
-                            </div>
-                })}
-
-                <h2>{title}</h2>
-            </div>
+              <Title>{title}</Title>
+          </div>
 
 }
 

@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from "prop-types";
-import "./ListFiltered.css"
+import {Container, Close} from "./styles.js"
 
 import {removeTextAction} from "../../state/actions";
 
@@ -42,15 +42,15 @@ function ListFiltered(props) {
         removeTextAction(text, color)
     }
 
-    return  <div className="listFiltered">
+    return  <Container className="listFiltered">
                 {finalList.map((info, key) => {
                             return <div key={`${key}-${info}${selectFilter}`}style={{"background": selectFilter}}>
                                         <span>{info}</span>
-                                        <button className="close" onClick={() => removeText(info, selectFilter)}>x</button>
+                                        <Close className="close" onClick={() => removeText(info, selectFilter)}>x</Close>
                                     </div>
                         })
                 }
-            </div>
+            </Container>
 
 }
 

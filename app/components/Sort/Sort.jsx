@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from "prop-types";
-import "./Sort.css"
+import {Triangle} from "./styles.js"
 
 import {sortAscendingTextAction} from "../../state/actions";
 
@@ -12,28 +12,27 @@ const mapStateToProps = state => {
 }
 
 const mapDispachToProps = dispatch => {
-    return {
-        sortAscendingText: info => dispatch(sortAscendingTextAction(info)),
-    }
+  return {
+    sortAscendingText: info => dispatch(sortAscendingTextAction(info)),
+  }
 }
 
 
 function Sort(props){
-    const {sortAscendingText, sortAscending} = props;
-    const className = sortAscending? "triangle rotate": "triangle";
-    
-    function changeSort(){
-        sortAscendingText(!sortAscending);
-    }
+  const {sortAscendingText, sortAscending} = props;
+  
+  function changeSort(){
+    sortAscendingText(!sortAscending);
+  }
 
-    return <div className="sort" onClick={changeSort}>
-                Sort <span className={className}></span>
-            </div>
+  return <div className="sort --flex" onClick={changeSort}>
+            Sort <Triangle className={`${sortAscending? "rotate": ""}`}></Triangle>
+          </div>
 }
 
 Sort.propTypes = {
-    sortAscending: PropTypes.bool.isRequired,
-    sortAscendingText: PropTypes.func.isRequired
+  sortAscending: PropTypes.bool.isRequired,
+  sortAscendingText: PropTypes.func.isRequired
 }
 
 export default connect(mapStateToProps, mapDispachToProps)(Sort);
