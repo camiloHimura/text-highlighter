@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Colors component take snapshot 1`] = `
+<div
+  className="sort --flex"
+  onClick={[Function]}
+>
+  Sort 
+  <styled.span
+    className=""
+  />
+</div>
+`;

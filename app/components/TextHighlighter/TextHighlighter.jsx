@@ -17,7 +17,7 @@ const mapDispachToProps = dispatch => {
   }
 }
 
-function TextHighlighter(props){
+export function TextHighlighter(props){
   const {optionSelected = "", selectHighLighter, addText} = props;
   const inputTextarea = useRef();
 

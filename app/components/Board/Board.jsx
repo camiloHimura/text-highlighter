@@ -6,7 +6,6 @@ import TextHighlighter from "../TextHighlighter";
 import ListFiltered from "../ListFiltered";
 import Sort from "../Sort";
 
-
 export function Board(props){
     const {selectFilter, selectFilterColorAction, selectHighLighter, selectHighLighterColorAction, colors} = props;
 

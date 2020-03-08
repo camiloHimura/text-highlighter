@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Board component take snapshot 1`] = `
+<Fragment>
+  <Colors
+    onClick={[MockFunction]}
+    optionSelected="selectHighLighter test"
+    options={
+      Array [
+        "blue",
+        "red",
+        "green",
+      ]
+    }
+    title="HighLighter"
+  />
+  <div
+    className="--clear-20"
+  />
+  <Connect(TextHighlighter)
+    optionSelected="selectHighLighter test"
+  />
+  <div
+    className="--clear-20"
+  />
+  <div
+    className="--flex --flexBetween"
+  >
+    <Colors
+      onClick={[MockFunction]}
+      optionSelected="selectFilter test"
+      options={
+        Array [
+          "blue",
+          "red",
+          "green",
+        ]
+      }
+      title="Filter"
+    />
+    <Connect(Sort) />
+  </div>
+  <div
+    className="--clear-20"
+  />
+  <Connect(ListFiltered)
+    selectFilter="selectFilter test"
+  />
+</Fragment>
+`;

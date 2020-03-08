@@ -5,12 +5,14 @@ import {Container, Title} from "./styles.js"
 function Colors(props){
   const {options, optionSelected, onClick, title = ''} = props;
 
-  return  <div className="--flex --alignCenter">
+  return  <div data-test='container' className="--flex --alignCenter">
               {options.map((color, key) => {
                   const selected = optionSelected === color ? 'selected': '';
                   
-                  return <Container key={`${key}-${color}`} 
-                            className={selected} 
+                  return <Container 
+                            data-test='color'
+                            className={selected}
+                            key={`${key}-${color}`} 
                             style={{"background": color}}
                             onClick={() => onClick(color)}
                           >

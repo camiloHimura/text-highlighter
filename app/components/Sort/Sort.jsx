@@ -18,7 +18,7 @@ const mapDispachToProps = dispatch => {
 }
 
 
-function Sort(props){
+export function Sort(props){
   const {sortAscendingText, sortAscending} = props;
   
   function changeSort(){

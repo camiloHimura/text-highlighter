@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Colors component take snapshot 1`] = `
+<styled.div
+  className="red"
+>
+  <textarea
+    autoFocus={true}
+    onSelect={[Function]}
+  />
+</styled.div>
+`;

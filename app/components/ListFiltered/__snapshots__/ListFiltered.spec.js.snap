@@ -1,0 +1,271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListFiltered component take snapshot 1`] = `
+<ListFiltered
+  removeTextAction={[MockFunction]}
+  selectFilter="red"
+  sortAscending={false}
+  textList={
+    Object {
+      "red": Array [
+        "abc",
+        "bcd",
+        "cda",
+      ],
+    }
+  }
+>
+  <styled.div
+    className="listFiltered"
+  >
+    <StyledComponent
+      className="listFiltered"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "iwKOFX",
+            "rules": Array [
+              "
+  height: 20vh;
+  padding: 6px;
+  overflow: auto;
+  border: 1px solid black;
+  
+  & > div{
+    width: fit-content;
+    padding: 2px 10px;
+    margin-bottom: 6px;
+    position: relative;
+    transition: all .2s;
+    overflow: hidden;
+    
+    &:hover{
+      padding-left: 34px;
+    
+      & .close{
+        transform: translateX(6px)
+      }
+    }
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <div
+        className="sc-bdVaJa iwKOFX listFiltered"
+      >
+        <div
+          data-test="contText"
+          key="0-abcred"
+          style={
+            Object {
+              "background": "red",
+            }
+          }
+        >
+          <span>
+            abc
+          </span>
+          <styled.button
+            className="close"
+            onClick={[Function]}
+          >
+            <StyledComponent
+              className="close"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "cEdXND",
+                    "rules": Array [
+                      "
+  top: 50%;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  margin-top: -10px;
+  position: absolute;
+  background: black;
+  transition: all .2s;
+  transform: translateX(-20px)
+",
+                    ],
+                  },
+                  "displayName": "styled.button",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "button",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              onClick={[Function]}
+            >
+              <button
+                className="sc-bwzfXH cEdXND close"
+                onClick={[Function]}
+              >
+                x
+              </button>
+            </StyledComponent>
+          </styled.button>
+        </div>
+        <div
+          data-test="contText"
+          key="1-bcdred"
+          style={
+            Object {
+              "background": "red",
+            }
+          }
+        >
+          <span>
+            bcd
+          </span>
+          <styled.button
+            className="close"
+            onClick={[Function]}
+          >
+            <StyledComponent
+              className="close"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "cEdXND",
+                    "rules": Array [
+                      "
+  top: 50%;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  margin-top: -10px;
+  position: absolute;
+  background: black;
+  transition: all .2s;
+  transform: translateX(-20px)
+",
+                    ],
+                  },
+                  "displayName": "styled.button",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "button",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              onClick={[Function]}
+            >
+              <button
+                className="sc-bwzfXH cEdXND close"
+                onClick={[Function]}
+              >
+                x
+              </button>
+            </StyledComponent>
+          </styled.button>
+        </div>
+        <div
+          data-test="contText"
+          key="2-cdared"
+          style={
+            Object {
+              "background": "red",
+            }
+          }
+        >
+          <span>
+            cda
+          </span>
+          <styled.button
+            className="close"
+            onClick={[Function]}
+          >
+            <StyledComponent
+              className="close"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "cEdXND",
+                    "rules": Array [
+                      "
+  top: 50%;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  margin-top: -10px;
+  position: absolute;
+  background: black;
+  transition: all .2s;
+  transform: translateX(-20px)
+",
+                    ],
+                  },
+                  "displayName": "styled.button",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "button",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              onClick={[Function]}
+            >
+              <button
+                className="sc-bwzfXH cEdXND close"
+                onClick={[Function]}
+              >
+                x
+              </button>
+            </StyledComponent>
+          </styled.button>
+        </div>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</ListFiltered>
+`;

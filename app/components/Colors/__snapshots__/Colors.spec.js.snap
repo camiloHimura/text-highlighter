@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Colors component take snapshot 1`] = `
+<div
+  className="--flex --alignCenter"
+  data-test="container"
+>
+  <styled.div
+    className=""
+    data-test="color"
+    key="0-blue"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "blue",
+      }
+    }
+  />
+  <styled.div
+    className=""
+    data-test="color"
+    key="1-red"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "red",
+      }
+    }
+  />
+  <styled.div
+    className=""
+    data-test="color"
+    key="2-green"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "green",
+      }
+    }
+  />
+  <styled.h2>
+    title test
+  </styled.h2>
+</div>
+`;
